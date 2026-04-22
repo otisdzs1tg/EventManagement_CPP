@@ -1,0 +1,120 @@
+/* Reset lề cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Nền màu gradient trẻ trung, năng động */
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    min-height: 100vh;
+    color: #1f2937;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tiêu đề chính */
+h1 {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* Khung nhập liệu (Làm nổi bật như một thẻ lơ lửng) */
+.form-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+h3 {
+    color: #374151;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Ô nhập chữ */
+input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9fafb;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+/* Nút bấm (Hiệu ứng gradient và đổ bóng) */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+}
+
+/* Khu vực danh sách */
+ul#event-list {
+    width: 100%;
+    max-width: 600px;
+    list-style-type: none;
+}
+
+/* Từng sự kiện (Thiết kế giống tấm vé) */
+li {
+    background: white;
+    margin: 15px 0;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-left: 6px solid #ec4899; /* Vạch màu hồng nổi bật */
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1f2937;
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(8px); /* Di chuột vào vé sẽ trượt nhẹ sang phải */
+}
+
+/* Thêm icon cái lịch trước mỗi sự kiện */
+li::before {
+    content: "📅";
+    margin-right: 15px;
+    font-size: 1.4rem;
+}
